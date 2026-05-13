@@ -29,7 +29,6 @@ create table bookings
     foreign key (customer_id) references customers(customer_id),
     foreign key (room_number) references rooms(room_number)
 );
-drop DATABASE if EXISTS hotel_management_system;
 CREATE VIEW all_bookings AS
 SELECT customers.customer_name,
 rooms.room_number, rooms.room_type, bookings.check_in_date, 
